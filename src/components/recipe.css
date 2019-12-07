@@ -1,6 +1,22 @@
 .Recipes{
-    width: 30%;
-    display: inline-block;
-    justify-content: space-around;
-    
+    width: 40%;
+    border-radius: 10%;
+    box-shadow: 0px 5px 20px rgb(71, 71, 71);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #f4f4f4;
 }
+
+.listStyle{
+    text-align: left;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .Recipes{
+        width: 95%;
+        
+    }
+  }

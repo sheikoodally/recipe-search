@@ -2,7 +2,10 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import SearchBar from './components/SearchBar';
 import Recipe from './components/Recipe';
-import Ingredient from './components/Ingradient';
+import Suggestion from './components/Suggestion';
+
+
+
 
 const App = () => {
 
@@ -43,6 +46,7 @@ const App = () => {
 
   return(
     <div className="App">
+      <Suggestion/>
      <form onSubmit={getSearch} className="search-form">
                 <input 
                     type="text" 
@@ -60,15 +64,17 @@ const App = () => {
                 </button>
 
         </form>
-      {recipes.map( recipe => (
-        <Recipe className = "recipeApp" key={recipe.recipe.uri}
-          label={recipe.recipe.label}
-          image= {recipe.recipe.image}
-          calories = {recipe.recipe.calories}
-          ingredientLines = {recipe.recipe.ingredientLines}
-          url = {recipe.recipe.url}
-        />
-      ))}
+        <div className = "recipeApp">
+          {recipes.map( recipe => (
+            <Recipe key={recipe.recipe.uri}
+              label={recipe.recipe.label}
+              image= {recipe.recipe.image}
+              calories = {recipe.recipe.calories}
+              ingredientLines = {recipe.recipe.ingredientLines}
+              url = {recipe.recipe.url}
+            />
+          ))}
+        </div>
     </div>
   );
 };

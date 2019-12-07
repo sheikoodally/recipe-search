@@ -1,0 +1,28 @@
+.suggestion{
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.videoSec{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-height: 20rem;
+    padding-bottom: 1rem;
+}
+.video{
+    width: 30%;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .video{
+        width: 45%;
+    }
+  }
+
+@media only screen and (max-width: 700px) {
+    .video{
+        width: 90%;
+    }
+  }
