@@ -14,6 +14,12 @@
     width: 30%;
 }
 
+iframe{
+    width: 90%;
+    height: 20rem;
+    border-radius: 5%;
+}
+
 
 @media only screen and (max-width: 900px) {
     .video{
